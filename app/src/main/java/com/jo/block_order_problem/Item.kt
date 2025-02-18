@@ -7,6 +7,7 @@ sealed class Item {
 
     data class SmallItem(
         val text: String,
-        val relatedBigItem: BigItem
+        val relatedBigItem: BigItem,
+        var isShow: Boolean = true,
     ): Item()
 }
