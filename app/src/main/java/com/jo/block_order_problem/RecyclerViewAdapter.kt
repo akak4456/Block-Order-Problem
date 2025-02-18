@@ -85,6 +85,17 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.RecyclerVie
         holder.bind(itemList[position])
     }
 
+    fun onItemMove(from: Int, to: Int) : Boolean {
+        val data = itemList[from]
+        //리스트 갱신
+        itemList.removeAt(from)
+        itemList.add(to,data)
+
+        // from에서 to 위치로 아이템 위치 변경
+        notifyItemMoved(from,to)
+        return true
+    }
+
     companion object {
         const val BIG_ITEM_TYPE = 0
         const val SMALL_ITEM_TYPE = 1
