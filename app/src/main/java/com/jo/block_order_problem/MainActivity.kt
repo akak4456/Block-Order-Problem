@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         })
         adapter.notifyDataSetChanged()
 
-        val helper = ReItemTouchHelper(object : ItemTouchHelper.Callback() {
+        val helper = ItemTouchHelper(object : ItemTouchHelper.Callback() {
             override fun getMovementFlags(
                 recyclerView: RecyclerView,
                 viewHolder: RecyclerView.ViewHolder

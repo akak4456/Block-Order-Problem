@@ -34,7 +34,7 @@ class BigAdapter : RecyclerView.Adapter<BigAdapter.BigHolder>() {
             rv.layoutManager = LinearLayoutManager(rootView.context)
             rv.adapter = adapter
 
-            val helper = ReItemTouchHelper(object : ItemTouchHelper.Callback() {
+            val helper = ItemTouchHelper(object : ItemTouchHelper.Callback() {
                 override fun getMovementFlags(
                     recyclerView: RecyclerView,
                     viewHolder: RecyclerView.ViewHolder
